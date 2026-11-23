@@ -1,0 +1,16 @@
+
+# Diagnóstico del sistema
+psutil>=5.9.8
+
+# Procesamiento de audio
+numpy>=2.1,<3.0
+sounddevice>=0.4.6
+
+# Reconocimiento de voz
+openai-whisper
+
+# Integración con Gemini (opcional, para la arquitectura híbrida)
+google-genai
+
+# Comunicación con Ollama (opcional)
+ollama

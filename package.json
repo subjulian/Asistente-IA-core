@@ -1,0 +1,16 @@
+{
+  "name": "asistente-ia-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Frontend/main/main.js",
+"scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^45.4.1"
+  }
+}
