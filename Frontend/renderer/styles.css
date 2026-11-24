@@ -90,7 +90,7 @@ body {
    MICRÓFONO
 ================================= */
 .microphone_container {
-    margin-top: 50%;
+    margin-top: 30px;
 }
 
 .microphone_button {
@@ -111,12 +111,16 @@ body {
     cursor: pointer;
 }
 
+/* =================================
+   ECUALIZADOR
+================================= */
+
 .equalizer_container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .equalizer {
@@ -127,13 +131,20 @@ body {
     height: 50px;
 }
 
+/* Barras */
+
 .bar {
     display: block;
     width: 5px;
     height: 24px;
     background-color: var(--color-primary);
     border-radius: 50px;
+    transform-origin: center;
+
+    animation: onda 1.2s ease-in-out infinite alternate;
 }
+
+/* Colores */
 
 .bar:nth-child(2),
 .bar:nth-child(4),
@@ -141,111 +152,228 @@ body {
 .bar:nth-child(9),
 .bar:nth-child(12),
 .bar:nth-child(14) {
-  background-color: var(--color-accent);
+    background-color: var(--color-accent);
 }
 
+/* Alturas */
 
 .bar:nth-child(1),
 .bar:nth-child(5),
 .bar:nth-child(9),
 .bar:nth-child(15) {
-  height: 14px;
+    height: 14px;
 }
 
 .bar:nth-child(2),
 .bar:nth-child(4),
 .bar:nth-child(13) {
-  height: 22px;
+    height: 22px;
 }
 
 .bar:nth-child(3),
 .bar:nth-child(11),
 .bar:nth-child(14) {
-  height: 32px;
+    height: 32px;
 }
 
 .bar:nth-child(6),
 .bar:nth-child(10),
 .bar:nth-child(12) {
-  height: 28px;
+    height: 28px;
 }
 
 .bar:nth-child(7) {
-  height: 38px;
+    height: 38px;
 }
 
 .bar:nth-child(8) {
-  height: 44px;
+    height: 44px;
 }
 
+/* Animación */
 
-/* Animacion  */
-/* 1. Define los cambios de altura visual */
 @keyframes onda {
-  0%, 100% {
-    transform: scaleY(0.35); /* Se encoge al 35% de su altura */
-  }
-  50% {
-    transform: scaleY(1.15); /* Crece al 115% de su altura */
-  }
+    from {
+        transform: scaleY(0.35);
+    }
+
+    to {
+        transform: scaleY(1.15);
+    }
 }
 
-/* 2. Aplica la animación a todas las barras */
-.bar {
-  display: block;
-  width: 5px;
-  height: 24px;
-  background-color: var(--color-primary);
-  border-radius: 50px;
-  transform-origin: center; /* Crece y encoge desde el centro */
-  animation: onda 1.2s ease-in-out infinite;
-}
+/* Diferentes velocidades y retrasos */
 
-/* 3. Desfasa el inicio (animation-delay) y ritmo (animation-duration) */
 .bar:nth-child(1),
 .bar:nth-child(9) {
-  animation-delay: 0.1s;
-  animation-duration: 1.1s;
+    animation-delay: 0.1s;
+    animation-duration: 1.1s;
 }
 
 .bar:nth-child(2),
 .bar:nth-child(10) {
-  animation-delay: 0.4s;
-  animation-duration: 1.4s;
+    animation-delay: 0.4s;
+    animation-duration: 1.4s;
 }
 
 .bar:nth-child(3),
 .bar:nth-child(11) {
-  animation-delay: 0.2s;
-  animation-duration: 0.9s;
+    animation-delay: 0.2s;
+    animation-duration: 0.9s;
 }
 
 .bar:nth-child(4),
 .bar:nth-child(12) {
-  animation-delay: 0.6s;
-  animation-duration: 1.3s;
+    animation-delay: 0.6s;
+    animation-duration: 1.3s;
 }
 
 .bar:nth-child(5),
 .bar:nth-child(13) {
-  animation-delay: 0.3s;
-  animation-duration: 1.0s;
+    animation-delay: 0.3s;
+    animation-duration: 1s;
 }
 
 .bar:nth-child(6),
 .bar:nth-child(14) {
-  animation-delay: 0.7s;
-  animation-duration: 1.5s;
+    animation-delay: 0.7s;
+    animation-duration: 1.5s;
 }
 
 .bar:nth-child(7),
 .bar:nth-child(15) {
-  animation-delay: 0.15s;
-  animation-duration: 1.2s;
+    animation-delay: 0.15s;
+    animation-duration: 1.2s;
 }
 
 .bar:nth-child(8) {
-  animation-delay: 0.5s;
-  animation-duration: 0.95s;
+    animation-delay: 0.5s;
+    animation-duration: 0.95s;
 }
 
+/* =================================
+Diagnosticos
+================================= */
+hr{
+  margin-top: 20px;
+}
+
+.state{
+  margin-top: 18px;
+  color: var(--color-text);
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.diagnostics_container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.cpu_container,
+.ram_container,
+.disc_container {
+    flex: 1;
+    min-width: 0;
+    background-color: var(--color-surface);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.svg{
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.CPU, .RAM, .Disco{
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.pp_cpu, .pp_RAM, .pp_Disc{
+  font-size: 25px;
+  color: var(--color-text);
+}
+
+.barra-contenedor_cpu, .barra-contenedor_ram, .barra-contenedor_disco {
+  width: 100%;
+  max-width: 700px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Relleno activo */
+.barra-relleno_cpu, .barra-relleno_ram, .barra-relleno_disco {
+  width: var(--progreso, 35%);
+  height: 100%;
+  background-color: #29c5f6;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+
+/* =================================
+   ACCESOS RÁPIDOS
+================================= */
+
+.access_container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.analizar_container,
+.limpieza_container,
+.ajustes_container {
+    width: 100%;
+    min-width: 0;
+    min-height: 75px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    background-color: var(--color-surface);
+    padding: 10px 5px;
+    border-radius: 15px;
+
+    color: var(--color-text);
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Iconos */
+.access_container .svg {
+    width: 23px;
+    height: 23px;
+    margin-bottom: 0;
+}
+
+/* Texto */
+.analizar,
+.limpieza,
+.ajustes {
+    font-size: 12px;
+    color: var(--color-text);
+}
+
+/* Efecto al pasar el cursor */
+.analizar_container:hover,
+.limpieza_container:hover,
+.ajustes_container:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
