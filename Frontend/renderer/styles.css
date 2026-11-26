@@ -447,6 +447,7 @@ hr{
 ================================= */
 
 .content_expan {
+    display: none;
     display: flex;
     flex: 1;
 
@@ -627,6 +628,250 @@ hr{
 }
 
 /* =================================
+   Vistas dashboard
+================================= */
+.vista_inicio{
+    display: none;
+}
+/* =================================
+   Vistas diagnosticos
+================================= */
+
+.vista_diagnostico{
+    display: none;
+}
+
+
+.procesador,
+.memoria,
+.disco,
+.sistema{
+    background-color: var(--color-surface);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.procesador svg,
+.memoria svg,
+.disco svg,
+.sistema svg{
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.texto_diagnostico {
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.info_sistema,
+.nombre_procesador,
+.nombre_memoria,
+.disco_nombre,
+.sistema_op{
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.tipo_procesador,
+.por_procesador,
+.ram_usada,
+.disco_usado,
+.tipo_sistema{
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.uso,
+.porc_uso_memoria,
+.uso_total,
+.bits{
+    color: var(--color-text-secondary);
+    font-size: 16px;
+}
+
+/* =================================
+   Procesador
+================================= */
+.tipo_procesador{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.por_procesador{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* =================================
+   RAM Y DISCO
+================================= */
+.ram_usada,
+.disco_usado{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.barra-relleno_ram_expan, 
+.barra-relleno_disco_expan {
+  /* width: var(--progreso, 70%); */
+  height: 100%;
+  background-color: #29c5f6;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+.barra-relleno_ram_expan{
+    width: var(--progreso, 50%);
+}
+.barra-relleno_disco_expan{
+    width: var(--progreso, 70%);
+}
+
+.barra-contenedor_ram_expan, .barra-contenedor_disco_expan {
+  width: 100%;
+  max-width: 700px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* =================================
+   SISTEMA OPERATIVO
+================================= */
+.tipo_sistema{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* =================================
+   Vista almacenamiento
+================================= */
+.vista_almacenamiento{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.almacenamiento_texto,
+.nombre_disco,
+.pp_almacenamiento,
+.analisis_archivos{
+    color: var(--color-text);
+}
+
+.unidades,
+.pp_ocupado,
+.alma_libre{
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.resumen_almacenamiento,
+.analisis_arc{
+    background: var(--color-surface);
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.almacenamiento_texto{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.unidades{
+    margin-bottom: 10px;
+}
+
+.estados_alma{
+    color: var(--color-success);
+    text-align: center;
+    margin-left: auto;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: var(--color-background);
+    font-weight: 500;
+    width: 60px;
+}
+.nombre_disco{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pp_almacenamiento{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.pp_ocupado,
+.alma_libre {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.pp_ocupado {
+    margin-right: 330px;
+}
+
+.alma_libre {
+    margin-left: auto;
+}
+
+.analisis_archivos{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.analisis_arc svg{
+    color: var(--color-accent);
+    width:20px;
+    height: 20px;
+}
+
+.temporales,
+.antiguos,
+.grandes {
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.grandes {
+    margin-bottom: 0;
+}
+
+.temporales svg,
+.antiguos svg,
+.grandes svg,
+.temporal,
+.arc_antiguos,
+.carpetas {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.temporales svg,
+.antiguos svg,
+.grandes svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.temporal,
+.arc_antiguos,
+.carpetas {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* =================================
    ADAPTACIÓN DE PANTALLA
 ================================= */
 
@@ -639,6 +884,7 @@ hr{
         grid-template-columns: 1fr;
     }
 }
+
 
 
 

@@ -168,7 +168,6 @@
 
         </div>
     </div>
-
     <!-- CONTENIDO INFERIOR -->
     <div class="content_expan">
 
@@ -234,33 +233,153 @@
 
             <!-- PANEL PRINCIPAL -->
             <div class="principal_expan">
+                <section class="vista_inicio">
+                    <h2 class="Panel">Panel principal</h2>
+                    <h3 class="resumen">Resumen del equipo</h3>
 
-                <h2 class="Panel">Panel principal</h2>
-                <h3 class="resumen">Resumen del equipo</h3>
+                    <div class="estado_pc">
 
-                <div class="estado_pc">
+                        <div class="porcentaje_cpu">
+                            <p class="CPU2">CPU</p>
+                            <p class="por_Cpu">24%</p>
+                        </div>
 
-                    <div class="porcentaje_cpu">
-                        <p class="CPU2">CPU</p>
-                        <p class="por_Cpu">24%</p>
+                        <div class="porcentaje_ram">
+                            <p class="ram2">RAM</p>
+                            <p class="por_ram">56%</p>
+                        </div>
+
+                        <div class="porcentaje_disco">
+                            <p class="Disco">Disco</p>
+                            <p class="por_disco">72%</p>
+                        </div>
+
+                        <div class="porcentaje_historial">
+                            <p class="numero_historial">Historial</p>
+                            <p class="por_historial">-</p>
+                        </div>
+
+                    </div>   
+                </section>
+                <section class="vista_diagnostico">
+                    <h2 class="texto_diagnostico">Diagnostico del equipo</h2>
+                    <p class="info_sistema">Informacion general del sistema</p>
+                    <div class="estado_pc">
+                        <div class="procesador">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="16" height="16" x="4" y="4" rx="2"/>
+                                <rect width="6" height="6" x="9" y="9" rx="1"/>
+                                <path d="M15 2v2"/>
+                                <path d="M15 20v2"/>
+                                <path d="M2 15h2"/>
+                                <path d="M2 9h2"/>
+                                <path d="M20 15h2"/>
+                                <path d="M20 9h2"/>
+                                <path d="M9 2v2"/>
+                                <path d="M9 20v2"/>
+                            </svg>
+                            <p class="nombre_procesador">Procesador</p>
+                            <p class="tipo_procesador">Ryzen 5</p>
+                            <p class="por_procesador">32%</p>
+                            <p class="uso">Uso actual</p>
+                        </div>
+
+                        <div class="memoria">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 19v-3"/>
+                                <path d="M10 19v-3"/>
+                                <path d="M14 19v-3"/>
+                                <path d="M18 19v-3"/>
+                                <path d="M8 11V9"/>
+                                <path d="M16 11V9"/>
+                                <path d="M12 11V9"/>
+                                <path d="M2 15h20"/>
+                                <path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"/>
+                            </svg>
+                            <p class="nombre_memoria">Memoria RAM</p>
+                            <p class="ram_usada">8 /16 GB</p>
+                            <div class="barra-contenedor_ram_expan">
+                                <div class="barra-relleno_ram_expan" style="--progreso: 50%;"></div>
+                            </div>
+                            <p class="porc_uso_memoria">50% utilizado</p>  
+                        </div>
+
+                        <div class="disco">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" x2="2" y1="12" y2="12"/>
+                                <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+                                <line x1="6" x2="6.01" y1="16" y2="16"/>
+                                <line x1="10" x2="10.01" y1="16" y2="16"/>
+                            </svg>
+                            <p class="disco_nombre">Disco C:</p>
+                            <p class="disco_usado">350 /500 GB</p>
+                            <div class="barra-contenedor_disco_expan">
+                                <div class="barra-relleno_disco_expan" style="--progreso: 70%;"></div>
+                            </div>
+                            <p class="uso_total">70% utilizado</p>
+                        </div>
+
+                        <div class="sistema">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="14" x="2" y="3" rx="2"/>
+                                <line x1="8" x2="16" y1="21" y2="21"/>
+                                <line x1="12" x2="12" y1="17" y2="21"/>
+                            </svg>
+                            <p class="sistema_op">Sistema operativo</p>
+                            <p class="tipo_sistema">Windows 11</p>
+                            <p class="bits">64 bits</p>
+                        </div>
+
                     </div>
+                </section>
+                <section class="vista_almacenamiento">
+                    <div class="estado_almacenamiento">
+                        <h2 class="almacenamiento_texto">Almacenamiento</h2>
+                        <p class="unidades">Administracion de unidades</p>
+                        <div class="resumen_almacenamiento">
+                            <p class="estados_alma">Normal</p>
+                            <p class="nombre_disco">Disco local (C:)</p>
+                            <p class="pp_almacenamiento">350 GB / 500 GB</p>
+                            <div class="barra-contenedor_disco_expan">
+                                <div class="barra-relleno_disco_expan" style="--progreso: 70%;"></div>
+                            </div>
+                            <p class="pp_ocupado">70% ocupado</p>
+                            <p class="alma_libre">150 GB libres</p>
+                        </div>
+                        <div class="analisis_arc">
+                            <h2 class="analisis_archivos">Analisis de archivos</h2>
+                            <div class="temporales">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/>
+                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                                    <circle cx="8" cy="16" r="6"/>
+                                    <path d="M9.5 17.5 8 16.25V14"/>
+                                </svg>
+                                <span class="temporal">Archivos temporales</span>
+                            </div>
+                            <div class="antiguos">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 6h18"/>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                                    <line x1="10" x2="10" y1="11" y2="17"/>
+                                    <line x1="14" x2="14" y1="11" y2="17"/>
+                                </svg>
+                                <span class="arc_antiguos">Archivos antiguos</span>
+                            </div>
+                            <div class="grandes">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1"/>
+                                    <path d="m21 21-1.9-1.9"/>
+                                    <circle cx="17" cy="17" r="3"/>
+                                </svg>
+                                <span class="carpetas">Carpetas con mayor tamaño</span>
+                            </div>
 
-                    <div class="porcentaje_ram">
-                        <p class="ram2">RAM</p>
-                        <p class="por_ram">56%</p>
+                        </div>
                     </div>
+                </section>
 
-                    <div class="porcentaje_disco">
-                        <p class="Disco">Disco</p>
-                        <p class="por_disco">72%</p>
-                    </div>
-
-                    <div class="porcentaje_historial">
-                        <p class="numero_historial">Historial</p>
-                        <p class="por_historial">-</p>
-                    </div>
-
-                </div>
             </div>
 
         </div>
