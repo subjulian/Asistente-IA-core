@@ -631,7 +631,8 @@ hr{
    Vistas dashboard
 ================================= */
 .vista_inicio{
-    display: none;
+    /* display: none; */
+    display: grid;
 }
 /* =================================
    Vistas diagnosticos
@@ -639,6 +640,7 @@ hr{
 
 .vista_diagnostico{
     display: none;
+    /* display: grid; */
 }
 
 
@@ -752,7 +754,8 @@ hr{
    Vista almacenamiento
 ================================= */
 .vista_almacenamiento{
-    display: grid;
+    display: none;
+    /* display: grid; */
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 16px;
     width: 100%;
@@ -870,6 +873,198 @@ hr{
     font-size: 14px;
     line-height: 1.2;
 }
+
+/* =================================
+   Vista historial
+   ================================= */
+   .vista_historial{
+        display: none;
+       /* display: grid; */
+       grid-template-columns: repeat(1, minmax(0, 1fr));
+       gap: 16px;
+       width: 100%;
+    }
+
+    .analisis,
+    .diagnosticos_ajustes,
+    .analisis_disco{
+        background: var(--color-surface);
+        margin-bottom: 15px;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .actividad_historial{
+        margin-bottom: 10px;
+    }
+
+    .estado_anali,
+    .estado_diag{
+        color: var(--color-success);
+        width: 100px;
+    }
+    .estado_discoC{
+        color: var(--color-warning);
+        width: 130px;
+    }
+
+    .historial_texto,
+    .descripcion_analisis,
+    .descripcion_diag,
+    .descripcion_disco{
+        color: var(--color-text);
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .actividad_historial,
+    .horario_analisis,
+    .horario_diag,
+    .horario_disco{
+        color: var(--color-text-secondary);
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .estado_anali,
+    .estado_diag,
+    .estado_discoC{
+        text-align: center;
+        margin-left: auto;
+        margin-bottom: -5px;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: var(--color-background);
+        font-weight: 500;
+    }
+
+    /* =================================
+   Vista Ajustes
+   ================================= */
+   .vista_ajustes{
+        display: none;
+       /* display: grid; */
+       grid-template-columns: repeat(1, minmax(0, 1fr));
+       gap: 12px;
+       width: 100%;
+    }
+    .configuracion,
+    .titulo_general,
+    .titulo_apariencia,
+    .titulo_voz{
+        color: var(--color-text);
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .personalizar{
+        color: var(--color-text-secondary);
+        font-size: 15px;
+    }
+
+    .general,
+    .apariencia,
+    .voz{
+        background-color: var(--color-surface);
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .inicio2,
+    .visible,
+    .tema,
+    .asistente{
+        color: var(--color-text);
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .inicio2{
+        margin-left: 100px;
+    }
+    .visible {
+        color: var(--color-text);
+        font-size: 15px;
+    }
+
+    .activado {
+        color: var(--color-text);
+        font-size: 14px;
+        background-color: var(--color-background);
+        float: right;
+        margin-right: 16px;
+        padding: 4px 12px;
+        border-radius: 20px;
+    }
+    .titulo_general{
+        margin-bottom: 10px;
+    }
+
+    .hr{
+        border: none;
+        height: 1px;
+        width: 100%;
+        background-color: var(--color-text-secondary);
+        opacity: .5;
+        margin-bottom: 15px;
+    }
+
+    .titulo_apariencia{
+        margin-bottom: 10px;
+    }
+
+    .tema{
+        margin-bottom: 10px;
+    }
+
+    .oscuro{
+        border: 1px solid var(--color-primary);
+        width: 190px;
+        padding: 10px;
+        background-color: var(--color-background);
+        color: var(--color-text);
+        cursor: pointer;
+        margin-right: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .claro{
+        border: none;
+        width: 190px;
+        padding: 10px;
+        background-color: var(--color-text);
+        color: var(--color-background);
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .asistente,
+    .activado_voz,
+    .visible,
+    .inicio2,
+    .activado {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+    }
+    .activado_voz {
+        color: var(--color-success);
+        font-size: 14px;
+        background-color: var(--color-background);
+        float: right;
+        margin-right: 16px;
+        padding: 4px 12px;
+        border-radius: 20px;
+    }
+    .titulo_voz{
+        margin-bottom: 10px;
+    }
+
+
+
+
+
 
 /* =================================
    ADAPTACIÓN DE PANTALLA
